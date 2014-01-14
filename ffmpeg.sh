@@ -149,6 +149,10 @@ then
     dots "Installing libvpx"
     install_libvpx &>>$LOG
     dots "Installing libvpx" $?
+    
+    dots "Installing libasound"
+    install_libasound &>>$LOG
+    dots "Installing libasound" $?
 
     ldconfig 
 else
