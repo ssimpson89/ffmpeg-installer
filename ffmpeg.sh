@@ -24,7 +24,6 @@ export global TMPDIR=$HOME/tmp
 mkdir -p $HOME/tmp
 export global DOWNDIR=/root/ffmpeginstall
 mkdir -p $DOWNDIR
-#DESTDIR="DESTDIR=/whatevs"
 export global DESTDIR=""
 export global ARCH=$(arch)
 export global LOG=$DOWNDIR/log
