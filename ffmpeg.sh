@@ -31,8 +31,11 @@ export global LOG=$DOWNDIR/log
 
 traps &>$LOG
 
-## Presetup 
+## Header
+echo -e "\n FFMPEG Installer Script \n"
+echo -e "\n Log File: $LOG\n"
 
+## Presetup 
 echo -e "\n#### Running PreSetup #### \n"
 
 dots "Installing Ruby"
