@@ -84,6 +84,8 @@ run_yum() {
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon \
     expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl -y
 
+    sed -i '/exclude/s/^#//g' /etc/yum.conf
+    
     rpm -e alsa-lib --nodeps
     return 0
 }

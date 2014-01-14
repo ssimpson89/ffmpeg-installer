@@ -18,6 +18,7 @@ opts $@
 
 #PreInstall
 
+tabs 16
 export global cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 export global TMPDIR=$HOME/tmp
 mkdir -p $HOME/tmp
@@ -42,9 +43,9 @@ dots "Removing Files"
 remove_stuff &>>$LOG
 dots "Removing Files" $?
 
-dots "Running Yum"
+dots "Running Yum Installs"
 run_yum &>>$LOG
-dots "Running Yum" $?
+dots "Running Yum Installs" $?
 
 dots "Checking Threads"
 check_threads &>>$LOG
