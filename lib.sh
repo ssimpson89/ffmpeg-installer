@@ -39,7 +39,7 @@ install_flvtool() {
     echo " -------------- Installing FLVTool -------------- "
     cd $DOWNDIR
     rm -vrf flvtool2
-    git clone git://github.com/unnu/flvtool2.git
+    git clone https://github.com/unnu/flvtool2.git flvtool2
     cd flvtool2
     ruby setup.rb config || local ERROR=1
     ruby setup.rb setup || local ERROR=1
@@ -275,7 +275,7 @@ install_x264() {
     echo " -------------- Installing x264 -------------- "
     cd $DOWNDIR
     rm -vrf x264
-    git clone git://git.videolan.org/x264.git
+    git clone http://repo.or.cz/r/x264.git x264
     cd x264/
     #broken centos5/32bit./configure  --prefix=/usr --enable-shared --disable-asm
     ./configure  --prefix=/usr --enable-shared || local ERROR=1
@@ -354,7 +354,7 @@ install_libvpx() {
     echo " -------------- Installing libvpx -------------- "
     cd $DOWNDIR
     rm -vrf libvpx
-    git clone http://git.chromium.org/webm/libvpx.git
+    git clone https://chromium.googlesource.com/webm/libvpx libvpx
     cd libvpx
     ./configure --enable-shared --prefix=/usr || local ERROR=1
     make || local ERROR=1
