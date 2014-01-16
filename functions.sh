@@ -1,11 +1,6 @@
 #!/bin/bash
 
 traps() {
-    if [ -e "/etc/csf/csf.conf" ]
-    then
-        csf -x 
-        trap "csf -e >/dev/null" EXIT
-    fi
     if [ -L /usr/bin/perl ]
     then
         trap "rm -f /usr/bin/perl ; mv /usr/bin/perl.old /usr/bin/perl ; rm -rf /opt/wt-perl" EXIT
