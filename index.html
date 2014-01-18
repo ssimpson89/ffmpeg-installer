@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ffmpeg-installer by stevo81989</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">ffmpeg-installer</h1>
+        <p class="header">A set of shell scripts designed to install the latest version of FFMPEG from source</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/stevo81989/ffmpeg-installer/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/stevo81989/ffmpeg-installer/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/stevo81989/ffmpeg-installer">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/stevo81989">stevo81989</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="ffmpeg-auto-installer" class="anchor" href="#ffmpeg-auto-installer"><span class="octicon octicon-link"></span></a>FFMPEG Auto Installer</h1>
+
+<p>A series of scripts used to help install the latest version of FFMPEG. This currently is only tested with CentOS. It may work with fedora but unless you translate the prerequisites with apt-get first it wont work with Ubunutu. This was also designed to work within a cpanel environment where many other prerequisites were already installed. This project was originally started by the ffmpeg auto installer folks <a href="http://www.ffmpeginstaller.com/">here</a>. I ran into tons of issues with the newer version of FFMPEG so rather than continually fixing it I just forked it and with the help of a colleague simplified and fixed it.  </p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<ol>
+<li>Clone the repo or download the zip</li>
+<li>run <code>sh ffmpeg.sh</code>
+</li>
+</ol><p>That's it! Pretty simple right! You should start seeing green "completed" if everything went well. If you see any "failed" messages you can check the log in $DOWNDIR/log. By default this is located in /root/ffmpeginstall/log. Each library will begin with the "Installing lib" so you can can easily search and find. </p>
+
+<h2>
+<a name="libraries-installed" class="anchor" href="#libraries-installed"><span class="octicon octicon-link"></span></a>Libraries Installed</h2>
+
+<ul>
+<li>FreeType</li>
+<li>libwmf</li>
+<li>FLVTool</li>
+<li>Lame</li>
+<li>libogg</li>
+<li>libvorbis</li>
+<li>VorbisTools</li>
+<li>libtheora</li>
+<li>openamr</li>
+<li>liba52</li>
+<li>FAAC</li>
+<li>FAAD2</li>
+<li>YASM</li>
+<li>NASM</li>
+<li>XVID</li>
+<li>x264</li>
+<li>Live555</li>
+<li>re2c</li>
+<li>amrnb</li>
+<li>amrwb</li>
+<li>libvpx</li>
+<li>libasound</li>
+</ul><h2>
+<a name="programs-installed" class="anchor" href="#programs-installed"><span class="octicon octicon-link"></span></a>Programs Installed</h2>
+
+<ul>
+<li>FFMPEG</li>
+<li>MPlayer</li>
+<li>MP4Box</li>
+<li>FFMPEG-PHP (GitHub Fork)</li>
+</ul><h2>
+<a name="future" class="anchor" href="#future"><span class="octicon octicon-link"></span></a>Future</h2>
+
+<ul>
+<li>Add all necessary prereq's</li>
+<li>Support for Ubuntu</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-47256244-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
