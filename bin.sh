@@ -28,9 +28,10 @@ install_ffmpeg() {
 install_mplayer() {
     echo " -------------- Installing MPlayer -------------- "
     cd $DOWNDIR
-    rm -vrf mplayer
-    svn checkout svn://svn.mplayerhq.hu/mplayer/trunk mplayer
-    cd mplayer/
+    rm -vrf mplayer-export*
+    wget http://svn.mplayerhq.hu/MPlayer/releases/mplayer-export-snapshot.tar.bz2 -O mplayer.tar.bz2
+    tar xjf mplayer.tar.bz2
+    cd mplayer-export-*
     sed -i 1517d configure
     ./configure --prefix=/usr  --codecsdir=/usr/lib/codecs/   \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
@@ -46,7 +47,7 @@ install_mp4box() {
     echo " -------------- Installing MP4Box -------------- "
     cd $DOWNDIR
     rm -rf gpac
-    svn co svn://svn.code.sf.net/p/gpac/code/trunk/gpac gpac
+    svn co http://svn.code.sf.net/p/gpac/code/trunk/gpac gpac
     cd gpac/
     ./configure --enable-shared --prefix=/usr  || local ERROR=1
     #./configure --prefix=/usr --extra-cflags=-I/usr/include/ \
