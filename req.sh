@@ -75,7 +75,7 @@ remove_stuff() {
 run_yum() {
     echo " -------------- Running Yum -------------- "
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
-    yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php xvidcore
+    yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer
 
     yum install curl-devel gcc gcc-c++ libgcc gd gd-devel gettext freetype \
     freetype-devel libjpeg* libjpeg-devel* \
