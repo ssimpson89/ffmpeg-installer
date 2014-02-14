@@ -386,6 +386,7 @@ install_libasound() {
     rm -rf alsa-lib*
     wget ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.27.2.tar.bz2
     tar xjf alsa-lib*
+    cd alsa-lib-*
     ./configure --enable-shared --prefix=/usr || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
