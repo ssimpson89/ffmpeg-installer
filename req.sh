@@ -52,6 +52,7 @@ remove_stuff() {
     rm -rf /usr/local/lib/libogg*
     rm -rf /usr/local/lib/libtheora*
     rm -rf /usr/local/lib/libvorbis*
+    rm -f /usr/lib/libxvidcore.*
 
     unlink /usr/bin/ffmpeg >/dev/null 2>&1
     unlink /usr/local/bin/ffmpeg >/dev/null 2>&1
@@ -74,7 +75,7 @@ remove_stuff() {
 run_yum() {
     echo " -------------- Running Yum -------------- "
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
-    yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php
+    yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php xvidcore
 
     yum install curl-devel gcc gcc-c++ libgcc gd gd-devel gettext freetype \
     freetype-devel libjpeg* libjpeg-devel* \
