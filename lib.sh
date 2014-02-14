@@ -3,6 +3,22 @@
 
 ERROR=0
 
+install_libpng() {
+    echo " -------------- Installing libpng -------------- "
+    LIBPNG_VER=1.6.8
+    cd $DOWNDIR
+    rm -vrf libpng-*
+    wget ftp://ftp.simplesystems.org/pub/png/src/libpng16/libpng-$LIBPNG_VER.tar.gz
+    tar -xzf libpng-$LIBPNG_VER.tar.gz
+    cd libpng-$LIBPNG_VER
+    ./configure --prefix=/usr --enable-shared || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install || local ERROR=1
+
+    ldconfig
+    return $ERROR
+}
+
 install_freetype() {
     echo " -------------- Installing FreeType -------------- "
     FREETYPE_VER="2.5.0.1" #2013-06-19
