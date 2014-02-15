@@ -5,12 +5,11 @@ ERROR=0
 
 install_libpng() {
     echo " -------------- Installing libpng -------------- "
-    LIBPNG_VER=1.6.8
     cd $DOWNDIR
     rm -vrf libpng-*
-    wget ftp://ftp.simplesystems.org/pub/png/src/libpng16/libpng-$LIBPNG_VER.tar.gz
-    tar -xzf libpng-$LIBPNG_VER.tar.gz
-    cd libpng-$LIBPNG_VER
+    wget -N ftp://ftp.simplesystems.org/pub/png/src/libpng16/$(curl -L ftp://ftp.simplesystems.org/pub/png/src/libpng16/ 2>1 | grep -E ".tar.gz$" | awk '{ print $NF }')
+    tar -xzf libpng-*
+    cd libpng-*
     ./configure --prefix=/usr --enable-shared || local ERROR=1
     make -j$cpu || local ERROR=1
     make install || local ERROR=1

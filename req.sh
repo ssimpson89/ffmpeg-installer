@@ -77,9 +77,8 @@ run_yum() {
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
     yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer
 
-    yum install curl-devel gcc gcc-c++ libgcc gd gd-devel gettext freetype \
-    freetype-devel libjpeg* libjpeg-devel* \
-    libpng* libpng-devel* libstdc++* libstdc++-devel* libtiff* \
+    yum install curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
+    libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* \
     libtiff-devel* libtool* libxml* libxml2* \
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* \
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon \
