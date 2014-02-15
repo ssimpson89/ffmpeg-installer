@@ -11,6 +11,7 @@ That's it! Pretty simple right! You should start seeing green "completed" if eve
 
 Libraries Installed
 ---
+- libpng
 - FreeType
 - libwmf
 - FLVTool
