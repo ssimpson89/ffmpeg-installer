@@ -63,6 +63,9 @@ echo -e "\n#### Installing Libraries #### \n"
 
 if ! $binonly
 then
+    dots "Installing libpng"
+    install_libpng >>$LOG 2>1
+    dots "Installing libpng" $?
         
     dots "Installing Freetype"
     install_freetype >>$LOG 2>1
