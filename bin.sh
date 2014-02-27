@@ -32,7 +32,7 @@ install_mplayer() {
     wget http://svn.mplayerhq.hu/MPlayer/releases/mplayer-export-snapshot.tar.bz2 -O mplayer.tar.bz2
     tar xjf mplayer.tar.bz2
     cd mplayer-export-*
-    sed -i 1517d configure
+    sed -i 1521d configure
     ./configure --prefix=/usr  --codecsdir=/usr/lib/codecs/   \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
     --confdir=/user/etc/mplayer || local ERROR=1
