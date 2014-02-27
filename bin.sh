@@ -32,6 +32,7 @@ install_mplayer() {
     wget http://svn.mplayerhq.hu/MPlayer/releases/mplayer-export-snapshot.tar.bz2 -O mplayer.tar.bz2
     tar xjf mplayer.tar.bz2
     cd mplayer-export-*
+    git clone --depth 1 https://github.com/FFmpeg/FFmpeg ffmpeg; touch ffmpeg/mp_auto_pull #Grabbing ffmpeg first for verbosity
     sed -i 1521d configure
     ./configure --prefix=/usr  --codecsdir=/usr/lib/codecs/   \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
